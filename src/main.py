@@ -109,11 +109,13 @@ def LoadData():
 
 if __name__ == '__main__':
     data = LoadData()
-    filename = "../headlines.txt"
+    filePath = "../"
     
-    print("Writing data to file...",end='')
+    filename = input("Please enter the desired file name: ")
     
-    with open(filename, 'w') as open_file:
+    print("Writing data to file " + filename + " ...",end='')
+    
+    with open(filePath + filename, 'w') as open_file:
         open_file.writelines(data)
     
     print("Done!")
